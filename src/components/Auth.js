@@ -1,4 +1,3 @@
-// src/Auth.js
 import React from 'react';
 import { useAuth } from './AuthContext';
 
@@ -7,12 +6,10 @@ const Auth = () => {
 
   return (
     <div>
-      {/* Display message based on authentication status */}
       <p className="authText">
         {isAuthenticated ? "You are now authenticated, you can proceed" : "You are not authenticated"}
       </p>
       <div>
-        {/* Checkbox to simulate authentication */}
         <input
           type="checkbox"
           onChange={authenticate}
