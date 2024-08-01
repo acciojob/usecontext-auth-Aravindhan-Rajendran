@@ -8,7 +8,7 @@ const Auth = () => {
   return (
     <div>
       {/* Display message based on authentication status */}
-      <h1>{isAuthenticated ? "You are authenticated!" : "Click on the checkbox to get authenticated"}</h1>
+      <p>{isAuthenticated ? "You are authenticated!" : "Click on the checkbox to get authenticated"}</p>
       <div>
         {/* Checkbox to simulate authentication */}
         <input
