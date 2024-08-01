@@ -1,4 +1,3 @@
-// src/Auth.js
 import React, { useState } from 'react';
 import { useAuth } from './AuthContext';
 
