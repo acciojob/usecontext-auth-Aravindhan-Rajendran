@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { AuthProvider, useAuth } from './AuthContext';
-import './../styles/App.css';
+import '../styles/App.css';
 
 const Auth = () => {
   const { isAuthenticated, authenticate } = useAuth();
