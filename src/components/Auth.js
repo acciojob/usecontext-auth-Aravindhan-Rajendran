@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from './AuthContext';
 
 const Auth = () => {
-  const { isAuthenticated, authenticate } = useAuth();
+  const { isAuthenticated, authenticate, logout } = useAuth();
 
   return (
     <div>
