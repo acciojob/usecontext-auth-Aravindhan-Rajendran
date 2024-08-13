@@ -1,24 +1,16 @@
 import React from 'react';
-import { useAuth } from './AuthContext';
+import { AuthProvider } from './AuthContext';
+import Auth from './Auth';
 
-const Auth = () => {
-  const { isAuthenticated, toggleAuth } = useAuth();
-
+const App = () => {
   return (
-    <div>
-      <p className={isAuthenticated ? 'authText' : 'notAuthText'}>
-        {isAuthenticated ? 'You are authenticated!' : 'You are not authenticated.'}
-      </p>
-      <label>
-        <input
-          type="checkbox"
-          checked={isAuthenticated}
-          onChange={toggleAuth}
-        />
-        I am not a robot
-      </label>
-    </div>
+    <AuthProvider>
+      <div className="main-container">
+        <h1>Authentication Simulation</h1>
+        <Auth />
+      </div>
+    </AuthProvider>
   );
 };
 
-export default Auth;
+export default App;
