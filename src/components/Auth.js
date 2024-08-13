@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from './AuthContext';
 
 const Auth = () => {
-  const { isAuthenticated, toggleAuth } = useAuth();
+  const { isAuthenticated, toggleAuth } = useAuth(); // No argument passed
 
   return (
     <div>
