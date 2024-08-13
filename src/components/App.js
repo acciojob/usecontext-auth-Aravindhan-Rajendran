@@ -1,12 +1,14 @@
-
 import React from 'react';
 import { AuthProvider } from './AuthContext';
-import Auth from './Auth'; // Import the Auth component
+import Auth from './Auth';
 
 const App = () => {
   return (
     <AuthProvider>
-      <Auth />
+      <div className="main-container">
+        <h1>Authentication Simulation</h1>
+        <Auth />
+      </div>
     </AuthProvider>
   );
 };
