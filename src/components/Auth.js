@@ -7,7 +7,7 @@ const Auth = () => {
   return (
     <div>
       <p className={isAuthenticated ? 'authText' : 'notAuthText'}>
-        {isAuthenticated ? 'You are authenticated!' : 'You are not authenticated.'}
+        {isAuthenticated ? 'You are now authenticated, you can proceed' : 'You are not authenticated'}
       </p>
       <label>
         <input
