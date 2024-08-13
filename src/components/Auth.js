@@ -1,34 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAuth } from './AuthContext';
 
 const Auth = () => {
-  const { isAuthenticated, authenticate, logout } = useAuth();
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked);
-    if (e.target.checked) {
-      authenticate();
-    }
-  };
+  const { isAuthenticated, toggleAuth } = useAuth();
 
   return (
     <div>
-      <p className="authText">
-        {isAuthenticated ? "You are now authenticated, you can proceed" : "You are not authenticated"}
-      </p>
-      <div>
+      <h2>{isAuthenticated ? 'You are authenticated!' : 'You are not authenticated.'}</h2>
+      <label>
         <input
           type="checkbox"
-          onChange={handleCheckboxChange}
-          id="auth-checkbox"
-          checked={isChecked}
+          checked={isAuthenticated}
+          onChange={toggleAuth}
         />
-        <label htmlFor="auth-checkbox">I'm not a robot</label>
-      </div>
-      {isAuthenticated && (
-        <button onClick={logout}>Logout</button>
-      )}
+        I am not a robot
+      </label>
     </div>
   );
 };
