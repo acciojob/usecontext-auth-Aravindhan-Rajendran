@@ -6,7 +6,9 @@ const Auth = () => {
 
   return (
     <div>
-      <h2>{isAuthenticated ? 'You are authenticated!' : 'You are not authenticated.'}</h2>
+      <p className={isAuthenticated ? 'authText' : 'notAuthText'}>
+        {isAuthenticated ? 'You are authenticated!' : 'You are not authenticated.'}
+      </p>
       <label>
         <input
           type="checkbox"
